@@ -1,9 +1,8 @@
 import "./styles.css"
-import alps from "./images/alps.jpg";
 
 const location = document.querySelector('input');
 const searchButton = document.querySelector('button');
-const body = document.querySelector('body');
+
 
 const refresh = (container)=>{
     while(container.firstChild){
@@ -20,6 +19,7 @@ function importAll(r) {
 const icons = importAll(require.context('./icons', false, /\.(png|jpe?g|svg)$/));
 
 const container = document.querySelector(".info-container");
+container.style.display = "none";
 
   async function getWeatherData(location) {
     const response = await fetch("https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/"+location+"?key=NTHJDAQ3YVDVMM7BU9FUJBGS6", {mode: 'cors'});
@@ -89,5 +89,6 @@ searchButton.addEventListener("click",async()=>{
     const iconName = (await weatherData).icon;
     img.src = icons[iconName+".svg"];
     location.value = '';
+    container.style.display = "block";
     console.log(icons);
 });
