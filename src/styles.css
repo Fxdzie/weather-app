@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+:root{
+    --roundedFont: "Poiret One";
+}
+body{
+    background-color: black;
+    color: white;
+    font-family: var(--roundedFont),sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+    align-items: center;
+}
+
+.search-container{
+    display: flex;
+    gap: 2.5vw;
+    padding: 3vh 5vw;
+    align-items: center;
+}
+
+.location-name{
+    font-size: 2vw;
+    font-weight: 600;
+}
+
+.current-weather{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    align-items: center;
+}
+
+.high-low,.general{
+    font-size: 2vw;
+    padding-top: 2vh;
+}
+
+.high-low{
+    display: flex;
+    gap: 3vw;
+}
+
+.general{
+    padding-top: 4vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.temp,.feels-like{
+    text-align: center;
+}
+
+.temp{
+    font-size: 3vw;
+    font-weight: 700;
+}
+
+input,button{
+    border-radius: 16px;
+    height: 4vh;
+    border: none;
+    font-family: var(--roundedFont);
+    font-weight: 700;
+    font-size: 1.25vw;
+    text-align: center;
+}
+
+input{
+    width: 30vw;
+}
+
+button{
+    width: 10vw;
+}
+
